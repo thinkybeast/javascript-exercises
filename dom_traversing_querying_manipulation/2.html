@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>2</title>
+  </head>
+  <body>
+      <div id="1">
+          <h1 id="2">Hello, <em id="3">World</em></h1>
+          <p id="4">
+            Welcome to wonderland. This is an
+            <span id="5">awesome</span> place.
+          </p>
+          <a href="#" id="6"><strong id="7">Enter</strong></a>
+          <div id="8"><p id="9"><a href="#" id="10">Go back</a></p></div>
+        </div>
+  <script>
+    function childNodes(id) {
+      function getDescendentCount(node) {
+        var directChildren = node.childNodes;
+        var indirectChildren = 0;
+
+        if (directChildren.length === 0) { return 0; }
+
+        [].slice.call(directChildren).forEach(function(childNode) {
+          indirectChildren += getDescendentCount(childNode)
+        })
+
+        return directChildren.length + indirectChildren;
+
+      }
+
+      var parentNode = document.getElementById(id);
+      var directChildren = parentNode.childNodes;
+      var indirectChildren = 0;
+      var i;
+
+      for (i = 0; i < directChildren.length; i += 1 ) {
+        indirectChildren += getDescendentCount(directChildren[i]);
+      }
+
+      return [directChildren.length, indirectChildren];
+    }
+  </script>
+  </body>
+</html>

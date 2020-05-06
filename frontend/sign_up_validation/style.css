@@ -1,0 +1,102 @@
+body, input[type=submit] {
+  background-color: #5CBE43;
+  color: #fff;
+}
+* {
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2, p, form {
+  width: 800px;
+}
+
+h2 {
+  margin: 70px auto 10px auto;
+}
+
+#message {
+  display: none;
+  color: #A8396E;
+}
+
+#message.success {
+  color: limegreen;
+}
+
+form {
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.field {
+  color: #000;
+  display: grid;
+  grid-template-columns: 300px auto;
+  margin-top: 25px;
+}
+
+.field label {
+  grid-column-start: span 2;
+  margin-bottom: 5px;
+}
+
+.field input {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid gray;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.field input:focus {
+  border: 1px solid limegreen;
+}
+
+.field input.invalid {
+  border: 1px solid #A8396E;
+}
+
+#card_number {
+  display: grid;
+  grid-template-columns: 20% auto 20% auto 20% auto 20%;
+}
+
+#card_number span {
+  margin: auto;
+}
+
+.validation_error {
+  color: #A8396E;
+  margin: auto;
+  margin-left: 20px;
+}
+
+input[type=submit] {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 90px;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+#formdata {
+  display: none;
+  margin: 0 auto;
+}
+
+#formdata p {
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  margin: auto;
+}

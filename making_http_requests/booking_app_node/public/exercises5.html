@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Booking Time Slots</title>
+    <meta charset="utf-8">
+    <style>
+      label {
+        display: block;
+        margin: 10px;
+      }
+
+      .container {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Schedules</h1>
+    <form action="/api/bookings" method="POST" id="formSchedules">
+      <label for="schedules">
+        Please select one schedule:
+        <select name="schedules" id="schedules"></select>
+      </label>
+      <label for="email">
+        Email:
+        <input type="email" name="email" id="email">
+      </label>
+      <input type="submit" value="Submit">
+    </form>
+    <script src="javascripts/5_oo.js"></script>
+    <script src="javascripts/7.js"></script>
+  </body>
+</html>

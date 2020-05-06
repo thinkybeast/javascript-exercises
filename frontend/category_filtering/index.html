@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Car Filtering</title>
+  </head>
+  <body>
+    <header>
+      <h2>Buy Used Cars</h2>
+      <form action="#" method="post">
+        <label>
+          Make
+          <select name="make">
+            <option>All</option>
+          </select>
+        </label>
+        <label>
+          Model
+
+        </label>
+        <select name="model">
+            <option>All</option>
+          </select>
+        <label>
+          Price
+          <select name="price">
+            <option>Any</option>
+          </select>
+        </label>
+        <label>
+          Year
+          <select name="year">
+            <option>Any</option>
+          </select>
+        </label>
+        <input type="submit" value="Filter" />
+      </form>
+    </header>
+    <main>
+      <ul id="listings"></ul>
+    </main>
+    <script id="listing" type="text/x-handlebars">
+      <li data-id={{id}}>
+        <img src={{image}} />
+        <p><strong>{{make}} {{model}}</strong></p>
+        <p>Year: {{year}} </p>
+        <p>Price: {{price}} </p>
+        <a href="#">Buy</a>
+      </li>
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sign Up Validation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Sign Up Form</h2>
+  <form action="#" method="POST" novalidate>
+    <p id="message"></p>
+    <div class="field">
+      <label for="firstname">First Name</label>
+      <input type="text" name="firstname" required pattern="[a-zA-Z'\s]+" >
+      <span data-error="First Name" class="validation_error"></span>
+    </div>
+    <div class="field">
+      <label for="lastname">Last Name</label>
+      <input type="text" name="lastname" required pattern="[a-zA-Z'\s]+" >
+      <span data-error="Last Name" class="validation_error" ></span>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text" name="email" placeholder="someone@example.com" required pattern=".+@.+" >
+      <span data-error="Email" class="validation_error"></span>
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" name="password" required pattern=".{10,}" >
+      <span data-error="Password" class="validation_error"></span>
+    </div>
+    <div class="field">
+      <label for="phone_number">Phone Number</label>
+      <input type="text" name="phone_number" placeholder="111-222-3333" pattern="^\d{3}-\d{3}-\d{4}$" >
+      <span data-error="Phone Number" class="validation_error"></span>
+    </div>
+    <div class="field">
+      <label for="credit_card">Credit Card</label>
+      <div id="card_number">
+        <input name="credit_card" data-cdfield="1" type="text" pattern="\d{4}" maxlength="4" >
+        <span>-</span>
+        <input name="credit_card"  data-cdfield="2" type="text" pattern="\d{4}" maxlength="4">
+        <span>-</span>
+        <input name="credit_card"  data-cdfield="3" type="text" pattern="\d{4}" maxlength="4">
+        <span>-</span>
+        <input name="credit_card"  data-cdfield="4" type="text" pattern="\d{4}" maxlength="4">
+      </div>
+      <span data-error="Credit Card" class="validation_error"></span>
+    </div>
+    <input type="submit" value="Sign Up">
+  </form>
+  <div id="formdata">
+    <h2>Serialized Form</h2>
+    <p></p>
+  </div>
+</body>
+</html>

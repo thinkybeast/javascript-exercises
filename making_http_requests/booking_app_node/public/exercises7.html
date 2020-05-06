@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Cancel Bookings or Schedules</title>
+    <meta charset="utf-8">
+    <style>
+      section {
+        display: flex;
+        justify-content: center;
+      }
+
+      input {
+        margin: 5px;
+      }
+
+      .column {
+        width: 300px;
+        padding: 15px;
+      }
+
+    </style>
+    </head>
+    <body>
+      <section>
+        <div id="booked" class="column">
+          <h2>Booked schedules</h2>
+          <ul>
+          </ul>
+        </div>
+        <div id="available" class="column">
+          <h2>Available schedules</h2>
+          <ul>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div id="cancelBooking" class="column">
+          <h2>Cancel Booking</h2>
+          <form action="/api/bookings" method="PUT">
+            <label for="bookingId">Booking Id
+              <input type="text" name="bookingId" />
+            </label>
+            <input type="submit" value="Cancel Booking">
+          </form>
+        </div>
+        <div id="removeSchedule" class="column">
+            <h2>Remove Schedule</h2>
+            <form action="/api/schedules" method="PUT">
+              <label for="scheduleId">Schedule Id
+                <input type="text" name="scheduleId" />
+              </label>
+              <input type="submit" value="Remove Schedule">
+            </form>
+          </div>
+      </section>
+    <script src="javascripts/7.js"></script>
+  </body>
+</html>

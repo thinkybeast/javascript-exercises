@@ -1,0 +1,56 @@
+body {
+  background-color: #EEE9CE;
+}
+
+main {
+  width: 800px;
+  margin: 20px auto;
+}
+
+div.question + div.question {
+  margin-top: 20px;
+}
+
+input[type=submit], input[type=button] {
+  padding: 8px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+label.choice {
+  display: block;
+  margin: 10px 0 0 5px;
+}
+
+input[type=radio] {
+  margin-right: 10px;
+}
+
+input[type=submit] {
+  background-color: #74EC3B;
+}
+
+input[type=submit]:disabled {
+  background-color: rgb(175, 196, 178);
+}
+
+input[type=button] {
+  background-color: lightgrey;
+  margin-left: 10px;
+}
+
+p.answer {
+  height: 1.25rem;
+  padding: 5px;
+}
+
+.correct {
+  border: 2px solid limegreen;
+  background-color: lightgreen;
+}
+
+.incorrect {
+  border: 2px solid darkred;
+  background-color: lightpink;
+}

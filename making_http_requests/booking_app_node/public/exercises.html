@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Booking App Exercises</title>
+    <meta charset="utf-8">
+    <style>
+        section {
+          margin-bottom: 20px;
+        }
+        dl {
+            border: 3px double #ccc;
+            padding: 0.5em;
+        }
+        dt {
+            float: left;
+            clear: left;
+            width: 100px;
+            text-align: right;
+            font-weight: bold;
+            color: #f0595b;
+        }
+        dt::after {
+            content: ":";
+        }
+        dd {
+            margin: 0 0 0 110px;
+            padding: 0 0 0.5em 0;
+        }
+
+        input[type="submit"] {
+            color: #fff;
+            background: #f0595b;
+            border-color: #f0595b;
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        #addstaff {
+          display: none;
+        }
+       </style>
+  </head>
+  <body>
+    <section id="addstaff">
+      <form action="api/staff_members" method="POST">
+        <dl>
+            <dt>
+              <label for="email">Email</label>
+            </dt>
+            <dd>
+              <input type="email" id="email" name="email">
+            </dd>
+            <dt>
+              <label for="name">Name</label>
+            </dt>
+            <dd>
+              <input type="text" id="name" name="name">
+            </dd>
+        </dl>
+        <input type="submit">
+      </form>
+    </section>
+    <section id="add_schedules">
+      <button id="add_more">Add more schedules</button>
+      <form action="api/schedules" method="POST">
+        <dl class="add_schedule">
+          <dt>
+            <label for="staff_names">Staff Name:</label>
+          </dt>
+          <dd>
+            <select name="staff_names" id="staff_names"></select>
+          </dd>
+          <dt>
+            <label for="schedule_date">Date:</label>
+          </dt>
+          <dd>
+            <input type="date" name="schedule_date" id="schedule_date" />
+          </dd>
+          <dt>
+            <label for="schedule_time">Time:</label>
+          </dt>
+          <dd>
+            <input type="time" name="schedule_time" id="schedule_time" />
+          </dd>
+        </dl>
+        <input type="submit">
+      </form>
+    </section>
+    <script src="javascripts/exercises.js"></script>
+  </body>
+</html>

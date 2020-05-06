@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+header, main {
+  padding: 20px;
+  box-sizing: border-box;
+}
+header, form, #listings a {
+  background-color: #E29934;
+  color: #fff;
+  border-radius: 5px;
+}
+
+header * + * {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+select, input[type="submit"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: transparent;
+  color: #fff;
+  border: 1px solid white;
+  height: 25px;
+}
+
+select {
+  width: 80px;
+  margin-left: 5px;
+}
+
+input[type="submit"] {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+input[type="submit"]:hover {
+  background: rgba(0,0,0,.1);
+}
+
+#listings {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#listings li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 200px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+
+#listings img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#listings a {
+ text-decoration: none;
+ width: 40px;
+ padding: 5px;
+ margin: 5px;
+ text-align: center;
+}
